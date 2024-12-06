@@ -7,6 +7,7 @@
 
 void decompressToTextFile(void)  // decode data
 { 
+    cout << "Decompressing data, please wait . . .\n" << endl;
     fstream fileIn(fileNameIn, ios::in | ios::binary);
     fstream fileOut(fileNameOut, ios::out);
     if (!fileIn.is_open())
@@ -106,19 +107,23 @@ void decompressToTextFile(void)  // decode data
             root = tmp;
         }   
     }
-    cout << "Decompressing successfully" << endl;
+    cout << "Decompressing completed successfully" << endl;
     fileIn.close();
     fileOut.close();
 }
 
 void compressToBinaryFile(void)   // compress data
 { 
+    cout << "Compressing data, please wait . . .\n" << endl;
     fstream fileOut(fileNameOut, ios::out | ios::binary);
     if (!fileOut.is_open())
     {
         cout << "Can't open file " << fileNameOut << endl;
-        return;
+        return;     
     }
+    HuffmanCompressing huffmanCompressing;
+    huffmanCompressing.buildHuffmanTree();
+    huffmanCompressing.getMask();
     // Write table for decoding data
     int table_size = 0;
     for (int i = 0; i < 256; i++){
@@ -140,7 +145,7 @@ void compressToBinaryFile(void)   // compress data
     int byte = 0;
     int numBit = 0;
     int remainBit;
-    bool flag = true;
+
     for (int i = 0; line[i]; i++)
     {
         char ch = line[i];
@@ -157,7 +162,8 @@ void compressToBinaryFile(void)   // compress data
                 bitSize -= remainBit;
                 byte = (byte << remainBit) | (convertBit >> bitSize);
                 fileOut.write((char *)&byte, 1);
-                numBit = byte = 0;
+                numBit = 0;
+                byte = 0;
             }
         }
     }
@@ -167,7 +173,8 @@ void compressToBinaryFile(void)   // compress data
     byte = byte << padding;
     fileOut.write((char *)&byte, 1);
     fileOut.write((char *)&padding, 1);
-
+    originalSize = line.size();
+    compressSize = fileOut.tellp();
     cout << "Compressing successfully" << endl;
     fileOut.close();
 }

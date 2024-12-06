@@ -7,6 +7,6 @@ using namespace std;
 string getExtension(char*);
 void readTextFile(char*);
 void getFrequency(void);
-void compressBytesInfo(char*, char*);
+void compressInfo(char*, char*);
 
 #endif

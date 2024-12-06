@@ -5,6 +5,7 @@
 #include "../include/utils.h"
 #include "../include/codec.h"
 #include <cstring>
+#include <time.h>
 
 using namespace std;
 
@@ -21,16 +22,19 @@ int main(int argc, char* argv[]){
     string extFileOut = getExtension(fileNameOut);
     
     if (extFileIn == "txt" && extFileOut == "bin"){
+        clock_t startTime = clock();
         readTextFile(argv[1]);
         getFrequency();
-        HuffmanCompressing huffmanCompressing;
-        huffmanCompressing.buildHuffmanTree();
-        huffmanCompressing.getMask();
         compressToBinaryFile();
-        compressBytesInfo(fileNameIn, fileNameOut);
+        cout << "Execution time: " << (clock() - startTime) / CLOCKS_PER_SEC << "s" << endl;
+        compressInfo(fileNameIn, fileNameOut);
     }
     else if (extFileIn == "bin" && extFileOut == "txt"){
+        clock_t startTime = clock();
         decompressToTextFile();
+        cout << "Input file: " << fileNameIn << endl;
+        cout << "Output file: " << fileNameOut << endl;
+        cout << "Execution time: " << (clock() - startTime) / CLOCKS_PER_SEC << "s" << endl;
     }
     else{
         cout << "Invalid extension !!!" << endl;

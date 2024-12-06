@@ -12,4 +12,6 @@ extern int charFreq[256];
 extern string line;
 extern vector<Node*> lst;  // list node in heap while building tree
 extern pair <int, int> compressData[256];
+extern int originalSize;
+extern int compressSize;
 #endif

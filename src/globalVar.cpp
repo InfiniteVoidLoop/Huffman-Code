@@ -11,3 +11,5 @@ int charFreq[256] = {0};
 string line;
 vector<Node*> lst;  // list node in heap while building tree
 pair <int, int> compressData[256];
+int originalSize = 0;
+int compressSize = 0;

@@ -50,20 +50,11 @@ void readTextFile(char* fileName){
     }
 }
 
-void compressBytesInfo(char* fileNameIn, char* fileNameOut){
-    fstream fileIn(fileNameIn, ios::in);
-    fstream fileOut(fileNameOut, ios::in | ios::binary);
-    // Count bytes from fileIn
-    int cntBytes = 0;
-    while (fileIn.get() != EOF){
-        cntBytes++;
-    }
-    fileIn.close();
-    // Count bytes from fileOut
-    int cntBytesOut = 0;
-    while (fileOut.get() != EOF){
-        cntBytesOut++;
-    }
-    fileOut.close();
-    cout << "Compress from " << cntBytes << " bytes to " << cntBytesOut << " bytes" << endl;
+void compressInfo(char* fileNameIn, char* fileNameOut){
+    cout << "\n";
+    cout << "================== Compression Info ==================" << endl;
+    cout << "Input file: " << fileNameIn << endl;
+    cout << "Output file: " << fileNameOut << endl;
+    cout << "Original file size: " << originalSize << " bytes" << endl;
+    cout << "Compressed file size: " << compressSize << " bytes" << endl;
 }
