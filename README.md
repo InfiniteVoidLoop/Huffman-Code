@@ -56,6 +56,7 @@ This project was developed in C++ for compressing and decompressing text file as
 5. **Decompression**:  
    The program reconstructs the original text by recovering the huffman tree from the code table at file header.
 
+---
 ## Binary File Format
 When saving Huffman-encoded data into a binary file during compression, the file follows a specific structure. Below is the structure of the saved Huffman binary file:
 
@@ -73,6 +74,7 @@ When saving Huffman-encoded data into a binary file during compression, the file
 | **Encoded Binary Data** | -       | Encoded Huffman data                         |
 | **Padding**         | 1 byte     | Number of bits used for alignment            |
 
+---
 
 ## Enhancements
 We've already improved this project by using Canonical Huffman Tree which can encode file in fewer bits. With knowledge of the canonical Huffman algorithm, it is then possible to recreate the entire table (symbol and code values) from just the bit-lengths.
@@ -80,6 +82,8 @@ We've already improved this project by using Canonical Huffman Tree which can en
 There is a case when the depth of Huffman Tree is high (more than 32), so the previous version can face limitations when dealing with large code in the table. However, it is a pieace of cake when using Canonical Huffman Tree and save only the bit-lengths in the table.  
 
 Explore our Canonical Huffman Code with our [Canonical Huffman Coding Project on GitHub](https://github.com/InfiniteVoidLoop/Canonical-Huffman-Code)
+
+---
 
 
 ## Contact Information
