@@ -60,18 +60,19 @@ This project was developed in C++ for compressing and decompressing text file as
 When saving Huffman-encoded data into a binary file during compression, the file follows a specific structure. Below is the structure of the saved Huffman binary file:
 
 
-| **Name**              | **Size**         |        **Description**                    |
-|--------------------------------------------------------------------------------------|
-|   Table_size          | 1 byte           |  Size of the table                        |           
-|   Character 1         | 1 byte           |  Character 1                              |
-|   Code length 1       | 1 byte           |  Length of Huffman Code for character 1   |
-|   Code 1              | 4 bytes          |  Huffman Code for character 1             |
-|   Character 2         | 1 byte           |  Character 2                              |
-|   Code length 2       | 1 byte           |  Length of Huffman Code for character 2   |
-|   Code 2              | 4 bytes          |  Huffman Code for character 2             |
-|   ...                 | ...              |        ...                                |
-|   Encoded Binary Data | -                |  Encoded Huffman data                     |      
-|   Padding             | 1 byte           |  Number of bits use for alignment         | 
+| **Name**            | **Size**   | **Description**                              |
+|---------------------|------------|-----------------------------------------------|
+| **Table_size**      | 1 byte     | Size of the table                             |
+| **Character 1**     | 1 byte     | Character 1                                    |
+| **Code length 1**   | 1 byte     | Length of Huffman Code for character 1        |
+| **Code 1**          | 4 bytes    | Huffman Code for character 1                  |
+| **Character 2**     | 1 byte     | Character 2                                    |
+| **Code length 2**   | 1 byte     | Length of Huffman Code for character 2        |
+| **Code 2**          | 4 bytes    | Huffman Code for character 2                  |
+| **...**             | ...        | ...                                           |
+| **Encoded Binary Data** | -       | Encoded Huffman data                         |
+| **Padding**         | 1 byte     | Number of bits used for alignment            |
+
 
 ## Enhancements
 We've already improved this project by using Canonical Huffman Tree which can encode file in fewer bits. With knowledge of the canonical Huffman algorithm, it is then possible to recreate the entire table (symbol and code values) from just the bit-lengths.
