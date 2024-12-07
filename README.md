@@ -69,7 +69,7 @@ When saving Huffman-encoded data into a binary file during compression, the file
 | **Character 2**     | 1 byte     | Character 2                                    |
 | **Code length 2**   | 1 byte     | Length of Huffman Code for character 2        |
 | **Code 2**          | 4 bytes    | Huffman Code for character 2                  |
-| **...**             | ...        | ...                                           |
+|   **...**           |   ...       |          ...                                           |
 | **Encoded Binary Data** | -       | Encoded Huffman data                         |
 | **Padding**         | 1 byte     | Number of bits used for alignment            |
 
@@ -77,7 +77,8 @@ When saving Huffman-encoded data into a binary file during compression, the file
 ## Enhancements
 We've already improved this project by using Canonical Huffman Tree which can encode file in fewer bits. With knowledge of the canonical Huffman algorithm, it is then possible to recreate the entire table (symbol and code values) from just the bit-lengths.
 
-There is a case when the depth of Huffman Tree is high (more than 32), so the previous version can face limitations when dealing with large code in the table. However, it is a pieace of cake when using Canonical Huffman Tree and save only the bit-lengths in the table.
+There is a case when the depth of Huffman Tree is high (more than 32), so the previous version can face limitations when dealing with large code in the table. However, it is a pieace of cake when using Canonical Huffman Tree and save only the bit-lengths in the table.  
+
 Explore our Canonical Huffman Code with our [Canonical Huffman Coding Project on GitHub](https://github.com/InfiniteVoidLoop/Canonical-Huffman-Code)
 
 
@@ -92,10 +93,12 @@ If you have any questions, feedback, bug reports or feature requests feel free t
 We welcome collaboration, contributions, and any suggestions you may have!
 
 ---
-## Reference
+## References
+
 The following references and resources were used in the development of this project:
 
 1. [Huffman Coding - Wikipedia](https://en.wikipedia.org/wiki/Huffman_coding)  
-2. [Canonical Huffman Codes Explained](https://www.geeksforgeeks.org/canonical-huffman-coding/)  
-3. [ChatGPT]
+2. [Canonical Huffman Codes Explained - GeeksforGeeks](https://www.geeksforgeeks.org/canonical-huffman-coding/)  
+3. [ChatGPT - OpenAI](https://openai.com/)
+
 We'd like to give credit to these resources for their valuable insights and technical foundations.
