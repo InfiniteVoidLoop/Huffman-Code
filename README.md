@@ -31,6 +31,7 @@ This project was developed in C++ for compressing and decompressing text file as
 
 2. Compile the source code to exe
     ```bash
+    cd src
     g++ *.cpp -o 
 
 ## MakeFile
@@ -48,7 +49,9 @@ This project was developed in C++ for compressing and decompressing text file as
     brew install make
 
     # For Windows
-    Download and install from [GnuWin32](https://sourceforge.net/projects/gnuwin32/files/make/3.81/make-3.81.exe/download?use_mirror=onboardcloud&download=)
+   
+    open command prompt and paste the following command: winget install ezwinports.make
+    
     ```
 
 2. To run the program, use the following command:
