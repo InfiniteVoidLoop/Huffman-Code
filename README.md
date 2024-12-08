@@ -39,7 +39,7 @@ This project was developed in C++ for compressing and decompressing text file as
     ```bash
     make --version
     ```
-    If you don't have it installed, you can download it from [GNU Make](https://www.gnu.org/software/make/) or install it using a package manager like `apt` for Debian-based systems, `brew` for macOS, or from [GnuWin32](https://sourceforge.net/projects/gnuwin32/) for Windows:
+    If you don't have it installed, you can download it from [GNU Make](https://www.gnu.org/software/make/) or install it using a package manager like `apt` for Debian-based systems, `brew` for macOS, or from [GnuWin32](https://sourceforge.net/projects/gnuwin32/files/make/3.81/make-3.81.exe/download?use_mirror=onboardcloud&download=) for Windows:
     ```bash
     # For Debian-based systems
     sudo apt-get install make
@@ -48,7 +48,7 @@ This project was developed in C++ for compressing and decompressing text file as
     brew install make
 
     # For Windows
-    Download and install from [GnuWin32](https://sourceforge.net/projects/gnuwin32/)
+    Download and install from [GnuWin32](https://sourceforge.net/projects/gnuwin32/files/make/3.81/make-3.81.exe/download?use_mirror=onboardcloud&download=)
     ```
 
 2. To run the program, use the following command:
