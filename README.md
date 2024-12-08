@@ -32,42 +32,24 @@ This project was developed in C++ for compressing and decompressing text file as
 2. Compile the source code to exe
     ```bash
     cd src
-    g++ *.cpp -o 
+    g++ *.cpp -o main
 
-## MakeFile
-
-1. Ensure you have GNU Make installed. You can check if you have it by running:
-    ```bash
-    make --version
-    ```
-    If you don't have it installed, you can download it from [GNU Make](https://www.gnu.org/software/make/) or install it using a package manager like `apt` for Debian-based systems, `brew` for macOS, or from [GnuWin32](https://sourceforge.net/projects/gnuwin32/files/make/3.81/make-3.81.exe/download?use_mirror=onboardcloud&download=) for Windows:
-    ```bash
-    # For Debian-based systems
-    sudo apt-get install make
-
-    # For macOS
-    brew install make
-
-    # For Windows
-   
-    open command prompt and paste the following command:
-     - winget install ezwinports.make
-
-
-    ```
-
-2. To run the program, use the following command:
-    ```bash
-    make run <input file1> <input file2>
+## Usage  
+ - Note that the input file should be in the same directory as the executable file `main`, which is located in the `src` folder.
+ - If you want file in another directory, you can use the full path to the file.
+### Compression  
+- To compress a text file, run the following command:  
+      ```bash
+      ./main <input file1> <input file2>
     ```
     - For compressing a file: `<input file1>` should end with `.txt` and `<input file2>` should end with `.bin`.
-    - For decompressing a file: `<input file1>` should end with `.bin` and `<input file2>` should end with `.txt`.
-    
-## Usage  
-
-### Compression  
 
 ### Decompression
+- To decompress a binary file, run the following command:  
+      ```bash
+      ./main <input file1> <input file2>
+    ```
+    - For decompressing a file: `<input file1>` should end with `.bin` and `<input file2>` should end with `.txt`.
 
 ## How It Works  
 
