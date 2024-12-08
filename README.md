@@ -50,8 +50,8 @@ This project was developed in C++ for compressing and decompressing text file as
 
     # For Windows
    
-    open command prompt and paste the following command: winget install ezwinports.make
-    
+    open command prompt and paste the following command: 'winget install ezwinports.make'
+
     ```
 
 2. To run the program, use the following command:
