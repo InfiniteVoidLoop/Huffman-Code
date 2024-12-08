@@ -32,6 +32,31 @@ This project was developed in C++ for compressing and decompressing text file as
 2. Compile the source code to exe
     ```bash
     g++ *.cpp -o 
+
+## MakeFile
+
+1. Ensure you have GNU Make installed. You can check if you have it by running:
+    ```bash
+    make --version
+    ```
+    If you don't have it installed, you can download it from [GNU Make](https://www.gnu.org/software/make/) or install it using a package manager like `apt` for Debian-based systems, `brew` for macOS, or from [GnuWin32](https://sourceforge.net/projects/gnuwin32/) for Windows:
+    ```bash
+    # For Debian-based systems
+    sudo apt-get install make
+
+    # For macOS
+    brew install make
+
+    # For Windows
+    Download and install from [GnuWin32](https://sourceforge.net/projects/gnuwin32/)
+    ```
+
+2. To run the program, use the following command:
+    ```bash
+    make run <input file1> <input file2>
+    ```
+    - For compressing a file: `<input file1>` should end with `.txt` and `<input file2>` should end with `.bin`.
+    - For decompressing a file: `<input file1>` should end with `.bin` and `<input file2>` should end with `.txt`.
     
 ## Usage  
 
